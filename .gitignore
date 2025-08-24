@@ -1,0 +1,13 @@
+.DS_Store
+node_modules
+.idea
+/build
+.vscode/
+.idea/
+vite.config.*s.*
+*.log
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

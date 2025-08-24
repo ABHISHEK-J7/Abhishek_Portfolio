@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Background Colors */
+    --color-background: #0A0A0F; /* deep-space-foundation */
+    --color-foreground: #FFFFFF; /* white */
+    --color-surface: #1A1A2E; /* floating-element-depth */
+    --color-surface-foreground: #FFFFFF; /* white */
+    
+    /* Card Colors */
+    --color-card: #1A1A2E; /* floating-element-depth */
+    --color-card-foreground: #FFFFFF; /* white */
+    
+    /* Popover Colors */
+    --color-popover: #1A1A2E; /* floating-element-depth */
+    --color-popover-foreground: #FFFFFF; /* white */
+    
+    /* Muted Colors */
+    --color-muted: #2A2A3E; /* muted-surface */
+    --color-muted-foreground: #A0A0B0; /* text-secondary */
+    
+    /* Primary Colors */
+    --color-primary: #0066FF; /* electric-blue */
+    --color-primary-foreground: #FFFFFF; /* white */
+    
+    /* Secondary Colors */
+    --color-secondary: #00FF88; /* technical-achievement */
+    --color-secondary-foreground: #0A0A0F; /* deep-space-foundation */
+    
+    /* Accent Colors */
+    --color-accent: #8B5CF6; /* creative-vision */
+    --color-accent-foreground: #FFFFFF; /* white */
+    
+    /* Success Colors */
+    --color-success: #00FF88; /* technical-achievement */
+    --color-success-foreground: #0A0A0F; /* deep-space-foundation */
+    
+    /* Warning Colors */
+    --color-warning: #FFB800; /* attention-indicator */
+    --color-warning-foreground: #0A0A0F; /* deep-space-foundation */
+    
+    /* Error/Destructive Colors */
+    --color-error: #FF4757; /* problem-identification */
+    --color-error-foreground: #FFFFFF; /* white */
+    --color-destructive: #FF4757; /* problem-identification */
+    --color-destructive-foreground: #FFFFFF; /* white */
+    
+    /* Border Colors */
+    --color-border: rgba(255, 255, 255, 0.1); /* subtle-definition */
+    --color-input: rgba(255, 255, 255, 0.1); /* input-border */
+    --color-ring: #0066FF; /* electric-blue */
+    
+    /* Text Colors */
+    --color-text-primary: #FFFFFF; /* white */
+    --color-text-secondary: #A0A0B0; /* clear-hierarchy */
+    
+    /* Conversion Colors */
+    --color-conversion: #FF6B35; /* energetic-orange */
+    --color-conversion-foreground: #FFFFFF; /* white */
+    
+    /* Brand Colors */
+    --color-brand-primary: #0A0A0A; /* brand-foundation */
+    --color-brand-secondary: #1A1A1A; /* elevated-surface */
+    --color-trust-builder: #00FF88; /* technical-achievement */
+    --color-canvas: #050505; /* pure-dark */
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-inter font-bold text-text-primary;
+  }
+  
+  p, span, div {
+    @apply font-inter text-text-primary;
+  }
+  
+  code, pre {
+    @apply font-mono;
+  }
+}
+
+@layer components {
+  .cosmic-glow {
+    box-shadow: 0 0 20px rgba(0, 102, 255, 0.3);
+  }
+  
+  .talent-node-glow {
+    box-shadow: 0 8px 32px rgba(0, 102, 255, 0.15);
+  }
+  
+  .surface-elevation {
+    box-shadow: 0 4px 16px rgba(255, 255, 255, 0.05);
+  }
+  
+  .particle-glow {
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.4);
+  }
+  
+  .conversion-glow {
+    box-shadow: 0 0 15px rgba(255, 107, 53, 0.4);
+  }
+  
+  .smooth-transition {
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .spatial-transition {
+    transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .spring-animation {
+    transition: all 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  
+  .hover-scale {
+    @apply smooth-transition;
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+  
+  .talent-node-scale {
+    @apply smooth-transition;
+  }
+  
+  .talent-node-scale:hover {
+    transform: scale(1.1);
+  }
+  
+  .floating-element {
+    @apply surface-elevation bg-surface text-surface-foreground rounded-lg;
+  }
+  
+  .cosmic-border {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .gradient-text {
+    background: linear-gradient(135deg, #0066FF, #00FF88);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .cosmic-backdrop {
+    backdrop-filter: blur(8px);
+    background: rgba(26, 26, 46, 0.8);
+  }
+}
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+  
+  .text-gradient-primary {
+    @apply gradient-text;
+  }
+  
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-particle {
+    animation: particle-float 4s ease-in-out infinite;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 102, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 102, 255, 0.8);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes particle-float {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(-5px) translateX(2px);
+  }
+  50% {
+    transform: translateY(-10px) translateX(0px);
+  }
+  75% {
+    transform: translateY(-5px) translateX(-2px);
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* Selection Styling */
+::selection {
+  background: var(--color-primary);
+  color: var(--color-primary-foreground);
+}
+
+::-moz-selection {
+  background: var(--color-primary);
+  color: var(--color-primary-foreground);
+}
