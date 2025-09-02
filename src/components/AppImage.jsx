@@ -13,7 +13,7 @@ function Image({
       alt={alt}
       className={className}
       onError={(e) => {
-        e.target.src = "/assets/images/no_image.png"
+        e.target.src = "/assets/images/My_Image.jpg"
       }}
       {...props}
     />
