@@ -70,7 +70,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 <Button
                   variant="default"
                   onClick={handleLiveDemo}
-                  iconName="ExternalLink"
+                  iconName="https://adityauniversity.in/veda2025"
                   iconPosition="left"
                   className="cosmic-glow"
                 >
